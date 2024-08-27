@@ -36,22 +36,24 @@ def getDataPoint(quote):
     stock = quote['stock']
     bid_price = float(quote['top_bid']['price'])
     ask_price = float(quote['top_ask']['price'])
-    price_a = bid_price
-    price_b = ask_price
-    return stock, price_a, price_b
-
+    price = (bid_price + ask_price)/2
+ 
+    return stock, bid_price, ask_price, price
+    
 
 def getRatio(bid_price, ask_price):
 
 
 
-
     """ Get ratio of bid_price and ask_price """
-    """ ------------- Update this function ------------- """
+    """ ------------- Updated function ------------- """
 
-    price_a / price_b
+if bid_price == 0:
+    return
+    
+else:
+    return (bid_price+ ask_price)/2
 
-    return 1
 
 
 # Main
